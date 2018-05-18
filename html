@@ -1,49 +1,411 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin:0;}
+
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #4CAF50 !important;
+}
+</style>
+<body>
+
+<div class="icon-bar">
+  <a class="active" href="#"><i class="fa fa-home"></i></a> 
+  <a href="#"><i class="fa fa-search"></i></a> 
+  <a href="#"><i class="fa fa-envelope"></i></a> 
+  <a href="#"><i class="fa fa-globe"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a> 
+</div>
+
+</body>
+</html> <html>
+  <head>
+		<meta charset="utf-8" />
+    <title>Leaflet example</title>
+
+		<!-- include leaflet css and javascript -->
+		<link rel="stylesheet" crossorigin=""
+				href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"
+						crossorigin=""></script>
+
+		<!-- include our own css -->
+		<link rel="stylesheet" href="leaflet-example.css" />
+
+		<!-- we include the javascript at the bottom, see below -->
+	</head>
+
+	<body>OnBoard Maps
+		<h1><a href="http://leafletjs.com/">
+		<p>
+			<a href="http://leafletjs.com/"></a>
+			
+			<a href="one-file.html"></a>
+			<a href="https://lapizistik.github.io/leaflet-easymap/"></a>
+		</p>
+		<p>
+			<a href="https://github.com/Lapizistik/leaflet-examples"></a>
+		</p>
+		<p>
+			<em></em>
+			
+		</p>
+		<div id="map"></div>
+
+		<!-- include our own javascript -->
+		<script src="leaflet-example.js"></script>
+
+	</body>
+</html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.btn {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.success {background-color: #4CAF50;} /* Green */
+.success:hover {background-color: #46a049;}
+
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+
+.warning {background-color: #ff9800;} /* Orange */
+.warning:hover {background: #e68a00;}
+
+.danger {background-color: #f44336;} /* Red */ 
+.danger:hover {background: #da190b;}
+
+.default {background-color: #e7e7e7; color: black;} /* Gray */ 
+.default:hover {background: #ddd;}
+</style>
+</head>
+<body>
+
+<h1>Interactive buttons</h1>
+
+<button class="btn success">Success</button>
+<button class="btn info">Info</button>
+<button class="btn warning">Waiting</button>
+<button class="btn danger">Urgent</button>
+
+</body>
+</html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Social Login Form</h2>
+<p></p>
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <h2 style="text-align:center">Login with Social Media or Manually</h2>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <a href="#" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+         </a>
+        <a href="#" class="twitter btn">
+          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+        </a>
+        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+          </i> Login with Google+
+        </a>
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+      </div>
+      
+    </div>
+  </form>
+</div>
+
+<div class="bottom-container">
+  <div class="row">
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Sign up</a>
+    </div>
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Forgot password?</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE HTML>
 <html>
   <head>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>KML Layers</title>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
+		<meta charset="utf-8" />
+    <title></title>
 
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 8,
-          center: {lat: -26.548410, lng: 27.874684}
-      });
+		<!-- include leaflet css and javascript -->
+		<link rel="stylesheet" crossorigin=""
+				href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"
+						crossorigin=""></script>
 
-        var ctaLayer = new google.maps.KmlLayer({
-          url: 'https://drive.google.com/open?id=1-MBAyABnS63A977gn4bW-ePjy2lMj3Xs&usp=sharing',
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZCfMhE4HxKlXyVCq6siaO6NHp8xBp_I0&callback=initMap">
-    </script>
-  </body>
-</html> }
-      
+		<style type="text/css">
+			#map {
+			  height: 
+        550px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1><a href="http://leafletjs.com/"></a></h1>
+		<p>
+			
+			<a href="http://leafletjs.com/"></a>
+			
+			<a href="index.html"></a>
+			<a href="https://lapizistik.github.io/leaflet-easymap/"></a>
+		</p>
+		<p>
+			<a href="https://github.com/Lapizistik/leaflet-examples"></a>
+		</p>
+		<p>
+			<em></em>
+			
+		</p>
+		<div id="map"></div>
+
+		<script>
+			/*
+			the script mus be loaded after the map div is defined,
+			otherwise this will not work. Therefore the script is below
+			the div.
+			The source code below is the example from the leaflet start page.
+			*/
+			
+			var map = L.map('map').setView([-26.548410,27.874684], 12);
+			L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
+			L.marker([-26.548410,27.874684]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
        
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZCfMhE4HxKlXyVCq6siaO6NHp8xBp_I0&callback=initMap">
-    </script>
-  </body>
+      
+      L.marker([-26.615036, 27.837004]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
+      L.marker([-26.602834, 27.846317]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
+      L.marker([-26.591200, 27.846676]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
+      
+      L.marker([-26.583316, 27.834824]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
+      
+      L.marker([-26.579985, 27.836062]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
+      L.marker([-26.577651, 27.836356]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
+      L.marker([-26.567325, 27.847820]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
+      L.marker([-26.587789, 27.845915]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
+      L.marker([-26.564655, 27.850816]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
+      L.marker([-26.557710, 27.861529]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
+      L.marker([-26.558251, 27.862253]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
+      L.marker([-26.549546, 27.869401]).addTo(map)
+       .bindPopup('Hey there I am pop up!')
+       .openPopup();
+      L.marker([-26.548287, 27.875171]).addTo(map)
+			 .bindPopup('Hey there I am pop up!')
+			 .openPopup();
+       L.marker([-26.535431, 27.885419]).addTo(map)
+        .bindPopup('Hey there I am pop up!')
+			 .openPopup();
+       L.circle([-26.548410,27.874684], {radius: 8500}).addTo(map);
+       
+		</script>
+	</body>
 </html>
